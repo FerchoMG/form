@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 100;
+}
+html {
+    height: 100%;
+}
+body{
+    min-height: 100%;
+}
+.body >*{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    box-shadow: -1px 1px 7px 0px gray;
+}
+.header{
+    grid-area: header;
+    background-color: aqua;
+}
+.nav-bar{
+    grid-area: navbar;
+    background-color: aquamarine;
+}
+.content-form{
+    grid-area: contentform;
+    background-color: bisque;
+}
+.footer-container{
+    grid-area: footer;
+    background-color: aquamarine;
+}
+.body{
+    display: grid;
+    gap: 0;
+    grid-template: 
+    "header header" 10vh 
+    "navbar contentform" 75vh
+    "footer footer" auto / 200px auto; 
+}
