@@ -1,3 +1,7 @@
+:root{
+    --blue: #006bbb;
+    --lightblue: #30a0e0;
+}
 *{
     box-sizing: border-box;
     padding: 0;
@@ -8,34 +12,185 @@ html {
     height: 100%;
 }
 body{
+    background-color: antiquewhite;
     min-height: 100%;
 }
 .body >*{
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    box-shadow: -1px 1px 7px 0px gray;
+   
 }
 .header{
     grid-area: header;
-    background-color: aqua;
-}
-.nav-bar{
-    grid-area: navbar;
-    background-color: aquamarine;
 }
 .content-form{
     grid-area: contentform;
-    background-color: bisque;
+    background: linear-gradient(#30a0e0,#006bbb  );
 }
 .footer-container{
     grid-area: footer;
-    background-color: aquamarine;
+    background-color: rgb(4, 20, 31);
 }
 .body{
     display: grid;
     gap: 0;
     grid-template: 
-    "header header" 10vh 
-    "navbar contentform" 75vh
-    "footer footer" auto / 200px auto; 
+    "header header" 20vh 
+    "contentform contentform" 100vh
+    "footer footer" 20vh / 250px ; 
 }
+.dashboard{
+    list-style: none;
+ 
+}
+.nav-bar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--blue);
+    transition: all .5s ease;
+   
+}
+.nav-bar header {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background-color: var(--lightblue);
+}
+.nav-bar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 40px;
+    border: 1px solid #ebebeb3f;
+    transition: .3s;
+}
+.nav-bar ul li:hover a {
+    padding-left: 50px;
+}
+.nav-bar ul a i{
+    margin-right: 16px;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: var(--blue);
+    border-radius: 5px;
+}
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 30px;
+    line-height: 70px;
+    color: white;
+    padding: 0px 25px;
+    transition: all .5s;
+    border-radius: 3px;
+    position: fixed;
+}
+label #cancel{
+z-index: 1111;
+left: -195px;
+top: 17px;
+font-size: 30px;
+color: var(--lightblue);
+padding: 4px 9px;
+transition: all .5s ease;
+position: fixed;
+}
+#check:checked ~ .nav-bar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+
+}
+.nav-bar header{
+    text-align: left;
+    padding-left: 50px;
+    font-weight: bold;
+}
+.header{
+    font-family: 'Poppins', sans-serif;
+    background: url(/ASSETS/images/banner-header.jpg) no-repeat;
+    background-size: cover;
+}
+.header h1, h2{
+    color: white;
+}
+footer h2 {
+	padding-left: 16px;
+    padding-top: 10px;
+	margin-bottom: 12px;
+	text-align: center;
+}
+footer ul {
+	display: inline;
+	gap: 8px;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+.developers li {
+    margin: 50px;
+	display: inline;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+	color: rgb(243, 150, 150);
+}
+.university-info {
+    color: white;
+	margin: auto;
+	margin-top: 12px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.8em;
+}
+.content-form{
+    background: url(/ASSETS/images/background-content-form.jpg);
+    background-size: cover;
+}
+.responsive-btn-cont{
+    display: none;
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+	.responsive-btn-cont{
+    width: 3rem;
+    height: 3rem;
+    bottom: 4vw;
+    right: 4vw;
+    padding: 0;
+    border-radius: 6px;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    background-color: #006bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1111;
+    }
+    #btn{
+        display: none;
+    }
+	}
