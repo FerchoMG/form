@@ -176,6 +176,7 @@ footer ul {
 }
 .form{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .form-box{
@@ -190,7 +191,9 @@ footer ul {
     z-index: 1;
 }
 .form_group{
+    display: flex;
     padding: 0 30px;
+    padding-bottom: 30px;
     width: 350px;
     position: relative;
     color: black;
@@ -206,7 +209,7 @@ footer ul {
     border-bottom: 1px solid black;
 }
 .form_label{
-    padding: 0 30px;
+    padding-left: 30px;
     color: black;
     cursor: pointer;
     position: absolute;
@@ -245,6 +248,9 @@ footer ul {
         cursor: pointer;
     }
     #btn{
+        display: none;
+    }
+    #cancel{
         display: none;
     }
     .responsive-btn-cont >*{
