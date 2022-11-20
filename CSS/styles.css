@@ -1,88 +1,298 @@
 :root {
-    --redlightqatar: #8d1334;
-    --reddarkqatar: #5c051f;
+  --redlightqatar: #8d1334;
+  --reddarkqatar: #5c051f;
 }
 
 @font-face {
-    font-family: Qatar2022;
-    src: url(/ASSETS/Qatar2022Arabic-Bold.ttf);
+  font-family: Qatar2022;
+  src: url(/ASSETS/Qatar2022Arabic-Bold.ttf);
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-size: 100;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 100;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background-color: antiquewhite;
-    min-height: 100%;
+  background-color: white;
+  min-height: 100%;
+}
+img {
+  width: 100%;
+}
+.world-cup,
+.mascot {
+  max-width: 400px;
+  padding: 2rem;
 }
 
-.body>* {
-    font-family: 'Qatar2022', sans-serif;
-    text-align: center;
+.world-cup {
+  display: none;
+}
+.body > * {
+  font-family: "Qatar2022", sans-serif;
+  text-align: center;
+}
 
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+body .burger {
+  background-color: var(--reddarkqatar);
+  position: fixed;
+  color: white;
+  bottom: 0;
+  right: 0;
+  height: 8vh;
+  width: 8vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 4vh;
+  margin-bottom: 4vh;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.ecuador {
+  padding: 4rem;
+  display: flex;
+  place-items: center;
+}
+
+.worldcupred {
+  height: 100%;
+  padding-left: 0.9rem;
+}
+
+.eclogo {
+  width: 48px;
 }
 
 .header {
-    grid-area: header;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
 
-.content-form {
+.form,
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_group {
+  width: 80%;
+  margin: auto;
+}
+
+.footer-container {
+  padding: 4rem;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#check,
+.nav-bar,
+.cancel {
+  display: none;
+}
+
+.form_group {
+  display: flex;
+  padding: 0 30px;
+  padding-bottom: 30px;
+  width: 350px;
+  position: relative;
+  color: black;
+}
+
+.form_input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  color: black;
+  padding: 0.6em 0.3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.form_label {
+  padding-left: 30px;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform 0.5s, color 0.3s;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label {
+  transform: translateY(-12px) scale(0.9);
+  transform-origin: top left;
+  color: rgb(102, 3, 3);
+}
+.header{
+  background-color: #5c051f;
+  color: white;
+}
+.header h2{
+  font-weight: lighter;
+}
+.mascot{
+  width: 80%;
+  animation: mascot 5s infinite;
+  padding: 0%;
+  padding-top: 10%;
+}
+@keyframes mascot {
+  0% {
+    transform: translateY(-50px);
+  }
+  30% {
+    transform: translateY(0) rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+.ecuador{
+  display: flex;
+  padding: 30px;
+  padding-bottom: 40px;
+  justify-content: center;
+}
+.worldcupred{
+  width: 60%;
+}
+.footer-container{
+  background: linear-gradient(var(--redlightqatar), var(--reddarkqatar));
+}
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding: 15px;
+}
+.sponsors{
+width: 150px;
+padding: 10px;
+}
+.footer-container p{
+  color: white;
+  padding: 15px;
+  font-size: 25
+}
+
+@media screen and (min-width: 1024px) {
+  #check,
+  .nav-bar,
+  .cancel {
+    display: block;
+  }
+  .world-cup {
+    display: block;
+  }
+  .header {
+    grid-area: header;
+  }
+  .form-box {
+    display: flex;
+    flex-direction: row;
+  }
+  body .form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: baseline;
+  }
+
+  body .header {
+    padding-top: 8px;
+  }
+  body .header div {
+    margin-top: 0px;
+  }
+  body .world-cup {
+    padding-top: 0;
+    width: 300px;
+  }
+  .form_group {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    max-height: 16vh;
+  }
+  .content-form {
     display: flex;
     justify-content: space-between;
     background-color: white;
     grid-area: contentform;
+  }
 
-}
-
-.footer-container {
+  .footer-container {
     grid-area: footer;
-    background: linear-gradient(45deg, var(--redlightqatar), var(--reddarkqatar));
+    background: linear-gradient(
+      45deg,
+      var(--redlightqatar),
+      var(--reddarkqatar)
+    );
     outline: 1px solid slategray;
     position: relative;
     z-index: 2;
-}
-
-.body {
+  }
+  .body {
     display: grid;
     gap: 0;
     grid-template:
-        "header header" 150px "contentform contentform" 100vh
-        "footer footer" 150px / 250px;
-}
+      "header header" 150px "contentform contentform" 100vh
+      "footer footer" 150px / 250px;
+  }
 
-.dashboard {
+  .dashboard {
     list-style: none;
+  }
 
-}
-
-.nav-bar {
+  .nav-bar {
     position: fixed;
     left: -250px;
     width: 250px;
     height: 100%;
     background-color: var(--redlightqatar);
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     z-index: 3;
+  }
 
-}
-
-.nav-bar header {
+  .nav-bar header {
     font-size: 30px;
     color: white;
     text-align: center;
     line-height: 70px;
     background-color: var(--lightblue);
-}
+  }
 
-.nav-bar ul a {
+  .nav-bar ul a {
     display: block;
     height: 100%;
     width: 100%;
@@ -94,166 +304,143 @@ body {
     text-align: left;
     padding-left: 40px;
     border: 1px solid var(--reddarkqatar);
-    transition: .3s;
-}
+    transition: 0.3s;
+  }
 
-.nav-bar ul li:hover a {
+  .nav-bar ul li:hover a {
     padding-left: 50px;
-}
+  }
 
-.nav-bar ul a i {
+  .nav-bar ul a i {
     margin-right: 16px;
-}
+  }
 
-#check {
+  #check {
     display: none;
-}
+  }
 
-label #btn,
-label #cancel {
+  label #btn,
+  label #cancel {
     position: absolute;
     cursor: pointer;
     background: var(--blue);
     border-radius: 5px;
-}
+  }
 
-label #btn {
+  label #btn {
     left: 40px;
     top: 25px;
     font-size: 30px;
     line-height: 70px;
     color: white;
     padding: 0px 25px;
-    transition: all .5s;
+    transition: all 0.5s;
     border-radius: 3px;
     position: fixed;
     z-index: 2;
-}
+  }
 
-label #cancel {
+  label #cancel {
     z-index: 1111;
     left: -195px;
     top: 17px;
     font-size: 30px;
     color: var(--lightblue);
     padding: 4px 9px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     position: fixed;
-}
+  }
 
-#check:checked~.nav-bar {
+  #check:checked ~ .nav-bar {
     left: 0;
-}
+  }
 
-#check:checked~label #btn {
+  #check:checked ~ label #btn {
     left: 250px;
     opacity: 0;
     pointer-events: none;
-}
+  }
 
-#check:checked~label #cancel {
+  #check:checked ~ label #cancel {
     left: 195px;
+  }
 
-}
-
-.nav-bar header {
+  .nav-bar header {
     text-align: left;
     padding-left: 50px;
     font-weight: bold;
-}
+  }
 
-.header {
-    font-family: 'Qatar2022', sans-serif;
+  .header {
+    font-family: "Qatar2022", sans-serif;
     background-color: var(--reddarkqatar);
     align-items: center;
     justify-content: center;
-}
+  }
 
-.header div {
+  .header div {
     margin-top: 25px;
-}
+  }
 
-.world-cup {
+  .world-cup {
     width: 200px;
     float: right;
     position: relative;
-    top: -90px;
+    top: -100px;
     right: 25px;
-}
+  }
 
-.header h1,
-h2 {
+  .header h1,
+  h2 {
+    display: block;
     color: white;
+  }
 
-}
-
-.header h1 {
+  .header h1 {
+    display: inline-block;
     font-size: 40px;
-    margin: 0%;
+    margin-top: 10px;
+   
+  }
+.header h2{
+  font-weight: lighter;
 }
-
-footer h2 {
+  footer h2 {
     color: white;
     padding-left: 16px;
     padding-top: 10px;
     margin-bottom: 12px;
     text-align: center;
-}
+  }
 
-footer ul {
+  footer ul {
     display: inline;
     gap: 8px;
     width: 80%;
     margin: auto;
     text-align: center;
-}
-
-.developers li {
-    margin: 50px;
-    display: inline;
-    text-decoration: none;
-    width: 100%;
-    text-align: center;
-    color: #dad4d4;
-}
-
-.university-info {
-    color: white;
-    margin: auto;
-    margin-top: 12px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8em;
-}
-
-.footer-container {
+  }
+  .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.footer-container p {
+  .footer-container p {
     color: white;
     margin: 50px;
-}
-
-.sponsors {
-    height: 50px;
-    margin: 25px;
-}
-
-.responsive-btn-cont {
+  }
+  .responsive-btn-cont {
     display: none;
-}
+  }
 
-.form {
+  .form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-}
+    align-content: flex-start;
+  }
 
-.form-box {
+  .form-box {
     width: 60vw;
     height: 80vh;
     margin: auto;
@@ -262,12 +449,13 @@ footer ul {
     position: relative;
     z-index: 1;
     border-radius: 5px;
-    box-shadow: 2px 2px 4px 4px #8d133444
-}
-.form-box div{
+    box-shadow: 2px 2px 4px 4px #8d133444;
+  }
+  .form-box div {
     padding: 20px;
-}
-.behind-form-box {
+  }
+  .behind-form-box {
+    overflow: hidden;
     width: 35vw;
     height: 80vh;
     margin: auto;
@@ -276,132 +464,150 @@ footer ul {
     position: relative;
     z-index: 1;
     border-radius: 5px;
-    box-shadow: 2px 2px 4px 4px #8d13343b
-}
-.mascot{
-    width: 300px;
-    margin-top: 50px;
+    box-shadow: 2px 2px 4px 4px #8d13343b;
+  }
+  .mascot {
+    width: 350px;
+    padding: 0;
+    padding-top: 10px;
     animation: mascot 5s infinite;
-}
-.travel{
-margin: 10px;
-margin-bottom: 20px;
-font-size: 20px;
-font-weight: bolder;
-color: #5c051f;
-}
-.worldcupred{
-    height: 30px
-}
-.eclogo{
+  }
+  .travel {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #5c051f;
+  }
+  .worldcupred {
+    height: 30px;
+  }
+  .eclogo {
     height: 50px;
-}
-.ecuador{
+  }
+  .ecuador {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.ecuador img{
+  }
+  .ecuador img {
     margin: 5px;
-}
-@keyframes mascot{
-    0%{
-        transform: translateY(-50px);
+  }
+  @keyframes mascot {
+    0% {
+      transform: translateY(-50px);
     }
-    30%{
-        transform: translateY(0) rotate(5deg);
+    30% {
+      transform: translateY(0) rotate(5deg);
     }
-    50%{
-        transform: rotate(-5deg);
+    50% {
+      transform: rotate(-5deg);
     }
-    75%{
-        transform: rotate(5deg);
+    75% {
+      transform: rotate(5deg);
     }
-    100%{
-        transform: translateY(-50px);
+    100% {
+      transform: translateY(-50px);
     }
-    
-}
+  }
 
-.form_group {
-    display: flex;
-    padding: 0 30px;
+  .form_group {
+  display: flex;
+    padding: 0 20px;
     padding-bottom: 30px;
-    width: 350px;
+    width: 250px;
     position: relative;
     color: black;
-}
+  }
 
-.form_input {
+  .form_input {
     width: 100%;
     font-family: inherit;
     font-size: 1rem;
     color: black;
-    padding: .6em .3em;
+    padding: 0.6em 0.3em;
     border: none;
     outline: none;
     border-bottom: 1px solid black;
-}
+    padding-bottom: 0;
+  }
 
-.form_label {
+  .form_label {
     padding-left: 30px;
     color: black;
     cursor: pointer;
     position: absolute;
-    top: 0;
+    top: 15px;
     left: 5px;
-    transform: translateY(10px);
-    transition: transform .5s, color .3s;
-}
+    transform: translateY(12px);
+    transition: transform 0.5s, color 0.3s;
+  }
 
-.form_input:focus+.form_label,
-.form_input:not(:placeholder-shown)+.form_label {
-    transform: translateY(-12px) scale(.9);
+  .form_input:focus + .form_label,
+  .form_input:not(:placeholder-shown) + .form_label {
+    transform: translateY(-12px) scale(0.9);
     transform-origin: top left;
     color: rgb(102, 3, 3);
+  }
+  .ecuador {
+    display: flex;
+    padding: 0;
+    width: 190px;
+    margin: auto;
+  }
+
+  .ecuador img:nth-child(2) {
+    height: auto;
+  }
+  .footer-container {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  html .body .sponsors {
+    max-width: 500px;
+    height: auto;
+    margin: 0;
+  }
+  body .burger {
+    display: none;
+  }
+  body #btn{
+    display: flex;
+    background-color: #8d1334;
+    align-items: center;
+    padding: 0, 7px;
+  }
+  body #btn img{
+  height: 40px;
+  width: auto;
+  padding-left: 5px;
+  }
 }
 
-
-@media screen and (min-width: 100px) and (max-width: 600px) {
-    .responsive-btn-cont {
-        width: 4rem;
-        height: 4rem;
-        bottom: 4vw;
-        right: 4vw;
-        padding: 0;
-        border-radius: 6px;
-        font-size: 40px;
-        color: white;
-        position: fixed;
-        background-color: #034c85;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        z-index: 1111;
-    }
-
-    #checkresponsive {
-        display: none;
-        cursor: pointer;
-    }
-
-    #btn {
-        display: none;
-    }
-
-    #cancel {
-        display: none;
-    }
-
-    .responsive-btn-cont>* {
-        cursor: pointer;
-    }
-    .content-form{
-        display: block;
-    }
-    .content-form > *{
-        display: block;
-
-    }
+.modal {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.514);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
+
+.modal-on {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal li {
+  color: white;
+}
+/*
+min-width
+max-width
+
+height...
+*/

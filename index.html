@@ -5,30 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Form</title>
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0426ae85fd.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<body class="body">
-    
-    <input type="checkbox" id="check">
-    <label for="check"> 
-        <i class="fas fa-bars" id="btn"></i>
-        <i class="fas fa-times" id="cancel"></i>
-    </label>
-
-    <div class="responsive-btn-cont">
-        <input type="checkbox" id="checkresponsive">
-    <label for="check"> 
-        <i class="fas fa-bars" id="btnresponsive"></i>
-    </label>
-    </label>
-
+        
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/0426ae85fd.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+        <body class="body">
+            
+            <input type="checkbox" id="check">
+            <label class="cancel" for="check"> 
+                <i class="fas fa-bars" id="btn"> <img src="./ASSETS/images/Balon_Mundial_Al_Rihla_35_-removebg-preview_506x.webp" alt=""></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="nav-bar">
+                <header class="dashboard-tittle">FIFA</header>
+                <ul class="dashboard">
+                    <li><a href=""><i class="fas fa-house"></i>Inicio</a></li>
+                    <li><a href=""><i class="fas fa-user"></i>Cuenta</a></li>
+                    <li><a href=""><i class="fas fa-qrcode"></i>Calendario</a></li>
+                    <li><a href=""><i class="fas fa-calendar"></i>Eventos</a></li>
+                    <li><a href=""><i class="fas fa-link"></i>Web </a></li>
+                    <li><a href=""><i class="fas fa-stream"></i>Servicios</a></li>
+                    <li><a href=""><i class="fas fa-question-circle"></i>Sobre Nosotros</a></li>
+                </ul>
+            </div>
+   
+    <header class="header">
+        <div>
+        <h1>VIAJA AL MUNDIAL</h1>
+        <h2>¡Llena este formulario y participa ya!</h2>
     </div>
-    <div class="nav-bar">
-        <header class="dashboard-tittle">FIFA</header>
+        <picture>
+            <img class="world-cup"  src="./ASSETS/images/world-cup.png" alt="">
+        </picture>
+    </header>
+    
+    <main class="content-form">
+        <section class="behind-form-box">
+            <div>
+                 <div><img class="mascot" src="./ASSETS/images/mascot.png" alt="">
+                     <p class="travel">Viaja a Qatar con la TRI</p>
+                 </div>
+            </div class="tricontent">
+            
+            <div class="ecuador">
+                 <img class="eclogo" src="./ASSETS/images/ecuador-logo.png" alt="">
+                 <img class="worldcupred" src="./ASSETS/images/worldcupred.png" alt="">
+            </div>
+            
+         </section>
+         <section class="form-box">
+             
+             <!-- Linea de Inputs -->
+             <div class="form">
+                 <!-- Formato de inputs -->
+                 <div class="form_group">
+                 <input type="text" id="name" class="form_input" placeholder=" ">
+                 <label for="name" class="form_label">Nombres:</label>
+                 </div>
+                 
+                 <!-- Formato de inputs -->
+                 <div class="form_group">
+                     <input type="text" id="name" class="form_input" placeholder=" ">
+                     <label for="name" class="form_label">Apellidos:</label>
+                     </div>
+                     <div class="form_group">
+                         <input type="text" id="name" class="form_input" placeholder=" ">
+                         <label for="name" class="form_label">:</label>
+                         </div>
+                         <div class="form_group">
+                         <input type="text" id="name" class="form_input" placeholder=" ">
+                         <label for="name" class="form_label">:</label>
+                         </div>
+                         <div class="form_group">
+                             <input type="text" id="name" class="form_input" placeholder=" ">
+                             <label for="name" class="form_label">:</label>
+                             </div>
+                         
+                 </div>  
+                 
+                 <!-- Linea de inputs -->
+             
+             </section>   
+    </main>
+    <footer class="footer-container">
+        <img class="sponsors" src="ASSETS/images/auspice-1.png" alt="">
+        <img class="sponsors" src="ASSETS/images/auspice4.webp" alt="">
+        <img class="sponsors" src="ASSETS/images/Hisense-Qatar-2022-logo.png" alt="">
+        <img class="sponsors" src="ASSETS/images/fwc2022_fp_qatar_airways-co_dbgr-White-Qatar.webp" alt="">
+        <p>Fernando Molina  |  Merly Zambrano</p>
+    </footer>
+    <span class="material-symbols-outlined burger">menu</span>
+    <div class="modal">
         <ul class="dashboard">
             <li><a href=""><i class="fas fa-house"></i>Inicio</a></li>
             <li><a href=""><i class="fas fa-user"></i>Cuenta</a></li>
@@ -39,57 +110,6 @@
             <li><a href=""><i class="fas fa-question-circle"></i>Sobre Nosotros</a></li>
         </ul>
     </div>
-    <header class="header">
-        <div>
-        <h1>VIAJA AL MUNDIAL</h1>
-        <h2>¡Llena este formulario y participa ya!</h2>
-    </div>
-        <picture>
-            <img class="world-cup" src="./ASSETS/images/world-cup.png" alt="">
-        </picture>
-    </header>
-    
-    <main class="content-form">
-        <section class="behind-form-box">
-           <div>
-            <div><img class="mascot" src="./ASSETS/images/mascot.png" alt="">
-            <p class="travel">Viaja a Qatar con la TRI</p></div>
-           </div class="tricontent">
-           <div class="ecuador">
-            <img class="eclogo" src="./ASSETS/images/ecuador-logo.png" alt="">
-            <img class="worldcupred" src="./ASSETS/images/worldcupred.png" alt="">
-           </div>
-        </section>
-        <section class="form-box">
-            <div>
-            <!-- Linea de Inputs -->
-            <div class="form">
-                <!-- Formato de inputs -->
-                <div class="form_group">
-                <input type="text" id="name" class="form_input" placeholder=" ">
-                <label for="name" class="form_label">Nombres:</label>
-                </div>
-                <!-- Formato de inputs -->
-                <div class="form_group">
-                    <input type="text" id="name" class="form_input" placeholder=" ">
-                    <label for="name" class="form_label">Apellidos:</label>
-                    </div>
-                    <div class="form_group">
-                        <input type="text" id="name" class="form_input" placeholder=" ">
-                        <label for="name" class="form_label">:</label>
-                        </div>
-                </div>  
-                <!-- Linea de inputs -->
-            </div>
-            </section>
-    </main>
-    <footer class="footer-container">
-        <img class="sponsors" src="ASSETS/images/auspice-1.png" alt="">
-        <img class="sponsors" src="ASSETS/images/auspice4.webp" alt="">
-        <img class="sponsors" src="ASSETS/images/Hisense-Qatar-2022-logo.png" alt="">
-        <img class="sponsors" src="ASSETS/images/fwc2022_fp_qatar_airways-co_dbgr-White-Qatar.webp" alt="">
-        <p>Fernando Molina  |  Merly Zambrano</p>
-    </footer>
-  
+    <script src="./script.js"></script>
 </body>
 </html>
