@@ -4,8 +4,10 @@
 }
 
 @font-face {
-  font-family: Qatar2022;
-  src: url(/ASSETS/Qatar2022Arabic-Bold.ttf);
+  font-family: 'Qatar2022';
+  font-display: swap;
+  src: url(../ASSETS/Qatar2022Arabic-Bold.ttf) format(truetype);
+
 }
 
 * {
@@ -20,7 +22,9 @@ html {
 }
 
 body {
-  background-color: white;
+  
+  font-family: "Poppins" sans-serif;
+  background-color: white; 
   min-height: 100%;
 }
 img {
@@ -36,7 +40,8 @@ img {
   display: none;
 }
 .body > * {
-  font-family: "Qatar2022", sans-serif;
+  font-family: 'Poppins', monospace;
+  font-family: 'Qatar2022', "Poppins ", monospace;
   text-align: center;
 }
 
@@ -205,6 +210,8 @@ padding: 10px;
 }
 
 @media screen and (min-width: 1024px) {
+  
+  
   #check,
   .nav-bar,
   .cancel {
@@ -370,9 +377,8 @@ padding: 10px;
     padding-left: 50px;
     font-weight: bold;
   }
-
   .header {
-    font-family: "Qatar2022", sans-serif;
+    font-family: 'Qatar2022', "Poppins", monospace;
     background-color: var(--reddarkqatar);
     align-items: center;
     justify-content: center;
