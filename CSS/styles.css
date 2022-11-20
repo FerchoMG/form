@@ -1,69 +1,87 @@
-:root{
-    --blue: #006bbb;
-    --lightblue: #30a0e0;
+:root {
+    --redlightqatar: #8d1334;
+    --reddarkqatar: #5c051f;
 }
-*{
+
+@font-face {
+    font-family: Qatar2022;
+    src: url(/ASSETS/Qatar2022Arabic-Bold.ttf);
+}
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-size: 100;
 }
+
 html {
     height: 100%;
 }
-body{
+
+body {
     background-color: antiquewhite;
     min-height: 100%;
 }
-.body >*{
-    font-family: 'Open Sans', sans-serif;
+
+.body>* {
+    font-family: 'Qatar2022', sans-serif;
     text-align: center;
-   
+
 }
-.header{
+
+.header {
     grid-area: header;
 }
-.content-form{
+
+.content-form {
+    display: flex;
+    justify-content: space-between;
     background-color: white;
     grid-area: contentform;
 
 }
-.footer-container{
+
+.footer-container {
     grid-area: footer;
-    background-color: white;
+    background: linear-gradient(45deg, var(--redlightqatar), var(--reddarkqatar));
     outline: 1px solid slategray;
     position: relative;
     z-index: 2;
 }
-.body{
+
+.body {
     display: grid;
     gap: 0;
-    grid-template: 
-    "header header" 20vh 
-    "contentform contentform" 100vh
-    "footer footer" 20vh / 250px ; 
+    grid-template:
+        "header header" 150px "contentform contentform" 100vh
+        "footer footer" 150px / 250px;
 }
-.dashboard{
+
+.dashboard {
     list-style: none;
- 
+
 }
-.nav-bar{
+
+.nav-bar {
     position: fixed;
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: var(--blue);
+    background-color: var(--redlightqatar);
     transition: all .5s ease;
     z-index: 3;
-   
+
 }
+
 .nav-bar header {
-    font-size: 22px;
+    font-size: 30px;
     color: white;
     text-align: center;
     line-height: 70px;
     background-color: var(--lightblue);
 }
+
 .nav-bar ul a {
     display: block;
     height: 100%;
@@ -75,25 +93,31 @@ body{
     box-sizing: border-box;
     text-align: left;
     padding-left: 40px;
-    border: 1px solid #ebebeb3f;
+    border: 1px solid var(--reddarkqatar);
     transition: .3s;
 }
+
 .nav-bar ul li:hover a {
     padding-left: 50px;
 }
-.nav-bar ul a i{
+
+.nav-bar ul a i {
     margin-right: 16px;
 }
-#check{
+
+#check {
     display: none;
 }
-label #btn, label #cancel{
+
+label #btn,
+label #cancel {
     position: absolute;
     cursor: pointer;
     background: var(--blue);
     border-radius: 5px;
 }
-label #btn{
+
+label #btn {
     left: 40px;
     top: 25px;
     font-size: 30px;
@@ -105,92 +129,201 @@ label #btn{
     position: fixed;
     z-index: 2;
 }
-label #cancel{
-z-index: 1111;
-left: -195px;
-top: 17px;
-font-size: 30px;
-color: var(--lightblue);
-padding: 4px 9px;
-transition: all .5s ease;
-position: fixed;
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: var(--lightblue);
+    padding: 4px 9px;
+    transition: all .5s ease;
+    position: fixed;
 }
-#check:checked ~ .nav-bar{
+
+#check:checked~.nav-bar {
     left: 0;
 }
-#check:checked ~ label #btn{
+
+#check:checked~label #btn {
     left: 250px;
     opacity: 0;
     pointer-events: none;
 }
-#check:checked ~ label #cancel{
+
+#check:checked~label #cancel {
     left: 195px;
 
 }
-.nav-bar header{
+
+.nav-bar header {
     text-align: left;
     padding-left: 50px;
     font-weight: bold;
 }
-.header{
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--blue);
-}
-.header h1, h2{
-    color: white;
-}
-footer h2 {
-    color:rgb(73, 73, 73);
-	padding-left: 16px;
-    padding-top: 10px;
-	margin-bottom: 12px;
-	text-align: center;
-}
-footer ul {
-	display: inline;
-	gap: 8px;
-	width: 80%;
-	margin: auto;
-	text-align: center;
-}
-.developers li {
-    margin: 50px;
-	display: inline;
-	text-decoration: none;
-	width: 100%;
-	text-align: center;
-	color: rgb(0, 0, 0);
-}
-.university-info {
-    color: rgb(87, 85, 85);
-	margin: auto;
-	margin-top: 12px;
-	width: 80%;
-	display: flex;
-	flex-direction: column;
-	font-size: 0.8em;
+
+.header {
+    font-family: 'Qatar2022', sans-serif;
+    background-color: var(--reddarkqatar);
+    align-items: center;
+    justify-content: center;
 }
 
-.responsive-btn-cont{
+.header div {
+    margin-top: 25px;
+}
+
+.world-cup {
+    width: 200px;
+    float: right;
+    position: relative;
+    top: -90px;
+    right: 25px;
+}
+
+.header h1,
+h2 {
+    color: white;
+
+}
+
+.header h1 {
+    font-size: 40px;
+    margin: 0%;
+}
+
+footer h2 {
+    color: white;
+    padding-left: 16px;
+    padding-top: 10px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+footer ul {
+    display: inline;
+    gap: 8px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.developers li {
+    margin: 50px;
+    display: inline;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    color: #dad4d4;
+}
+
+.university-info {
+    color: white;
+    margin: auto;
+    margin-top: 12px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container p {
+    color: white;
+    margin: 50px;
+}
+
+.sponsors {
+    height: 50px;
+    margin: 25px;
+}
+
+.responsive-btn-cont {
     display: none;
 }
-.form{
+
+.form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.form-box{
-    width: 90vw;
+
+.form-box {
+    width: 60vw;
     height: 80vh;
-    background-color: white;
     margin: auto;
     margin-top: 10vh;
     margin-bottom: auto;
-    opacity: 60%;
     position: relative;
     z-index: 1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px #8d133444
 }
-.form_group{
+.form-box div{
+    padding: 20px;
+}
+.behind-form-box {
+    width: 35vw;
+    height: 80vh;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: auto;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px #8d13343b
+}
+.mascot{
+    width: 300px;
+    margin-top: 50px;
+    animation: mascot 5s infinite;
+}
+.travel{
+margin: 10px;
+margin-bottom: 20px;
+font-size: 20px;
+font-weight: bolder;
+color: #5c051f;
+}
+.worldcupred{
+    height: 30px
+}
+.eclogo{
+    height: 50px;
+}
+.ecuador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ecuador img{
+    margin: 5px;
+}
+@keyframes mascot{
+    0%{
+        transform: translateY(-50px);
+    }
+    30%{
+        transform: translateY(0) rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+    
+}
+
+.form_group {
     display: flex;
     padding: 0 30px;
     padding-bottom: 30px;
@@ -198,7 +331,8 @@ footer ul {
     position: relative;
     color: black;
 }
-.form_input{
+
+.form_input {
     width: 100%;
     font-family: inherit;
     font-size: 1rem;
@@ -208,7 +342,8 @@ footer ul {
     outline: none;
     border-bottom: 1px solid black;
 }
-.form_label{
+
+.form_label {
     padding-left: 30px;
     color: black;
     cursor: pointer;
@@ -218,42 +353,55 @@ footer ul {
     transform: translateY(10px);
     transition: transform .5s, color .3s;
 }
-.form_input:focus + .form_label,
-.form_input:not(:placeholder-shown) + .form_label{
+
+.form_input:focus+.form_label,
+.form_input:not(:placeholder-shown)+.form_label {
     transform: translateY(-12px) scale(.9);
     transform-origin: top left;
-    color: darkblue
+    color: rgb(102, 3, 3);
 }
 
+
 @media screen and (min-width: 100px) and (max-width: 600px) {
-	.responsive-btn-cont{
-    width: 4rem;
-    height: 4rem;
-    bottom: 4vw;
-    right: 4vw;
-    padding: 0;
-    border-radius: 6px;
-    font-size: 40px;
-    color: white;
-    position: fixed;
-    background-color: #034c85;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 1111;
+    .responsive-btn-cont {
+        width: 4rem;
+        height: 4rem;
+        bottom: 4vw;
+        right: 4vw;
+        padding: 0;
+        border-radius: 6px;
+        font-size: 40px;
+        color: white;
+        position: fixed;
+        background-color: #034c85;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1111;
     }
-    #checkresponsive{
+
+    #checkresponsive {
         display: none;
         cursor: pointer;
     }
-    #btn{
+
+    #btn {
         display: none;
     }
-    #cancel{
+
+    #cancel {
         display: none;
     }
-    .responsive-btn-cont >*{
+
+    .responsive-btn-cont>* {
         cursor: pointer;
     }
-	}
+    .content-form{
+        display: block;
+    }
+    .content-form > *{
+        display: block;
+
+    }
+}
