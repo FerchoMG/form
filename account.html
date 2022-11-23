@@ -30,18 +30,21 @@
         <ul class="dashboard">
             <li><a href="#home"><i class="fas fa-house"></i>Inicio</a></li>
             <li><a href="account.html"><i class="fas fa-user"></i>Cuenta</a></li>
-            <li><a href="https://www.marca.com/futbol/mundial/calendario.html" target="_blank"><i class="fas fa-qrcode"></i>Calendario</a></li>
-            <li><a href="https://www.fifa.com/fifaplus/en/tournaments" target="_blank"><i class="fas fa-calendar"></i>Eventos</a></li>
+            <li><a href="https://www.marca.com/futbol/mundial/calendario.html" target="_blank"><i
+                        class="fas fa-qrcode"></i>Calendario</a></li>
+            <li><a href="https://www.fifa.com/fifaplus/en/tournaments" target="_blank"><i
+                        class="fas fa-calendar"></i>Eventos</a></li>
             <li><a href="https://www.fifa.com/" target="_blank"><i class="fas fa-link"></i>Web </a></li>
-            <li><a href="https://www.fifa.com/social-impact" target="_blank"><i class="fas fa-stream"></i>Servicios</a></li>
+            <li><a href="https://www.fifa.com/social-impact" target="_blank"><i class="fas fa-stream"></i>Servicios</a>
+            </li>
             <li><a href="#we"><i class="fas fa-question-circle"></i>Sobre Nosotros</a></li>
         </ul>
     </div>
 
     <header id="home" class="header">
         <div>
-            <h1>VIAJA AL MUNDIAL</h1>
-            <h2>¡Llena este formulario y participa ya!</h2>
+            <h1>CREACIÓN DE CUENTA</h1>
+            <h2>¡Registrate, crea tu cuenta ya!</h2>
         </div>
         <picture>
             <img class="world-cup" src="./ASSETS/images/world-cup.png" alt="">
@@ -78,8 +81,18 @@
                         <label for="name" class="form_label">Apellidos:</label>
                     </div>
                     <div class="form_group">
-                        <input type="text" id="name" class="form_input" placeholder=" ">
-                        <label for="name" class="form_label">N. de cédula:</label>
+                        <input type="date" id="name" class="form_input" placeholder=" ">
+                        <label for="name" class="form_label">Fecha de nacimiento:</label>
+                    </div>
+                    <div class="form_group">
+                        <form action="">
+                            <p class="gender_account">
+                                Género:<br>
+                                <input class="radio_m" type="radio" name="genero" value="Femenino"> Femenino<br>
+                                <input class="radio_m" type="radio" name="genero" value="Masculino"> Masculino<br>
+                                <input class="radio_m" type="radio" name="genero" value="No Especificar"> No Especificar<br>
+                            </p>
+                        </form>
                     </div>
                     <div class="form_group">
                         <input type="text" id="name" class="form_input" placeholder=" ">
@@ -89,37 +102,22 @@
                         <input type="text" id="name" class="form_input" placeholder=" ">
                         <label for="name" class="form_label">Correo electrónico:</label>
                     </div>
+
                     <div class="form_group">
-                        <form action="">
-                            <p class="gender_p">
-                                Género:
-                                <select class="gender" name="Género" id="">
-                                    <option style="display: none;"></option>
-                                    <option>Femenino</option>
-                                    <option>Masculino</option>
-                                    <option>No especificar</option>
-                                </select>
-                            </p>
-                        </form>
+                        <input type="text" id="name" class="form_input" placeholder=" ">
+                        <label for="name" class="form_label">Nombre de usuario:</label>
                     </div>
-                    <div class="form_group" id="textarea_form">
-                        <textarea class="form_input" placeholder=" " name="" id="textomensaje" cols="30"
-                            rows="10"></textarea>
-                        <label for="name" class="form_label">¿Por qué deberías ir al mundial?</label>
+                    <div class="form_group">
+                        <input type="password" class="form_input" placeholder=" ">
+                        <label for="name" class="form_label" id="pass">Crear contraseña:</label>
                     </div>
-                    <div class="form_group" id="textcasilla_form">
-                        <form class="form_casilla">
-                            <p>
-                                ¿Qué mundiales has presenciado?<br>
-                                <input class="checkbox_m" type="checkbox"> Rusia 2018<br>
-                                <input class="checkbox_m" type="checkbox"> Brazil 2014<br>
-                                <input class="checkbox_m" type="checkbox"> Sudáfrica 2010<br>
-                            </p>
-                        </form>
+                    <div class="form_group">
+                        <input type="password" class="form_input" placeholder=" ">
+                        <label for="name" class="form_label" id="pass2">Validar contraseña:</label>
                     </div>
                     <div class="finalbtn">
-                        <input type="reset" value="Reiniciar el formulario" id="reset"> 
-                        <input type="submit"value="Enviar formulario" id="submit">
+                        <input type="reset" value="Reiniciar" id="reset">
+                        <input type="submit" value="Crear cuenta" id="submit">
                     </div>
 
                 </div>

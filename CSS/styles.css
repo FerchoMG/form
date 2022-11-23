@@ -22,14 +22,16 @@ html {
 }
 
 body {
-  
+
   font-family: "Poppins" sans-serif;
-  background-color: white; 
+  background-color: white;
   min-height: 100%;
 }
+
 img {
   width: 100%;
 }
+
 .world-cup,
 .mascot {
   max-width: 400px;
@@ -39,7 +41,8 @@ img {
 .world-cup {
   display: none;
 }
-.body > * {
+
+.body>* {
   font-family: 'Poppins', monospace;
   font-family: 'Qatar2022', "Poppins ", monospace;
   text-align: center;
@@ -143,55 +146,67 @@ body .burger {
   transition: transform 0.5s, color 0.3s;
 }
 
-.form_input:focus + .form_label,
-.form_input:not(:placeholder-shown) + .form_label {
+.form_input:focus+.form_label,
+.form_input:not(:placeholder-shown)+.form_label {
   transform: translateY(-12px) scale(0.9);
   transform-origin: top left;
   color: rgb(102, 3, 3);
 }
-.header{
+
+.header {
   background-color: #5c051f;
   color: white;
 }
-.header h2{
+
+.header h2 {
   font-weight: lighter;
 }
-.mascot{
+
+.mascot {
   width: 80%;
   animation: mascot 5s infinite;
   padding: 0%;
   padding-top: 10%;
 }
+
 @keyframes mascot {
   0% {
     transform: translateY(-50px);
   }
+
   30% {
     transform: translateY(0) rotate(5deg);
   }
+
   50% {
     transform: rotate(-5deg);
   }
+
   75% {
     transform: rotate(5deg);
   }
+
   100% {
     transform: translateY(-50px);
   }
 }
-.ecuador{
+
+.ecuador {
   display: flex;
   padding: 30px;
   padding-bottom: 40px;
   justify-content: center;
 }
-.worldcupred{
+
+.worldcupred {
   width: 60%;
 }
-.footer-container{
+
+.footer-container {
   background: linear-gradient(var(--redlightqatar), var(--reddarkqatar));
 }
-.footer-container{
+
+.footer-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -199,34 +214,40 @@ body .burger {
   justify-content: center;
   padding: 15px;
 }
-.sponsors{
-width: 150px;
-padding: 10px;
+
+.sponsors {
+  width: 150px;
+  padding: 10px;
 }
-.footer-container p{
+
+.footer-container p {
   color: white;
   padding: 15px;
   font-size: 25
 }
 
 @media screen and (min-width: 1024px) {
-  
-  
+
+
   #check,
   .nav-bar,
   .cancel {
     display: block;
   }
+
   .world-cup {
     display: block;
   }
+
   .header {
     grid-area: header;
   }
+
   .form-box {
     display: flex;
     flex-direction: row;
   }
+
   body .form {
     width: 100%;
     display: flex;
@@ -238,19 +259,23 @@ padding: 10px;
   body .header {
     padding-top: 8px;
   }
+
   body .header div {
     margin-top: 0px;
   }
+
   body .world-cup {
     padding-top: 0;
     width: 300px;
   }
+
   .form_group {
     margin: 0;
     padding: 0;
     height: auto;
     max-height: 16vh;
   }
+
   .content-form {
     display: flex;
     justify-content: space-between;
@@ -260,15 +285,14 @@ padding: 10px;
 
   .footer-container {
     grid-area: footer;
-    background: linear-gradient(
-      45deg,
-      var(--redlightqatar),
-      var(--reddarkqatar)
-    );
+    background: linear-gradient(45deg,
+        var(--redlightqatar),
+        var(--reddarkqatar));
     outline: 1px solid slategray;
     position: relative;
     z-index: 2;
   }
+
   .body {
     display: grid;
     gap: 0;
@@ -358,17 +382,17 @@ padding: 10px;
     position: fixed;
   }
 
-  #check:checked ~ .nav-bar {
+  #check:checked~.nav-bar {
     left: 0;
   }
 
-  #check:checked ~ label #btn {
+  #check:checked~label #btn {
     left: 250px;
     opacity: 0;
     pointer-events: none;
   }
 
-  #check:checked ~ label #cancel {
+  #check:checked~label #cancel {
     left: 195px;
   }
 
@@ -377,6 +401,7 @@ padding: 10px;
     padding-left: 50px;
     font-weight: bold;
   }
+
   .header {
     font-family: 'Qatar2022', "Poppins", monospace;
     background-color: var(--reddarkqatar);
@@ -406,11 +431,13 @@ padding: 10px;
     display: inline-block;
     font-size: 40px;
     margin-top: 10px;
-   
+
   }
-.header h2{
-  font-weight: lighter;
-}
+
+  .header h2 {
+    font-weight: lighter;
+  }
+
   footer h2 {
     color: white;
     padding-left: 16px;
@@ -426,6 +453,7 @@ padding: 10px;
     margin: auto;
     text-align: center;
   }
+
   .footer-container {
     display: flex;
     align-items: center;
@@ -436,6 +464,7 @@ padding: 10px;
     color: white;
     margin: 50px;
   }
+
   .responsive-btn-cont {
     display: none;
   }
@@ -443,7 +472,8 @@ padding: 10px;
   .form {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
+    justify-content: center;
   }
 
   .form-box {
@@ -457,9 +487,11 @@ padding: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 4px 4px #8d133444;
   }
+
   .form-box div {
     padding: 20px;
   }
+
   .behind-form-box {
     overflow: hidden;
     width: 35vw;
@@ -472,52 +504,63 @@ padding: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 4px 4px #8d13343b;
   }
+
   .mascot {
     width: 350px;
     padding: 0;
     padding-top: 10px;
     animation: mascot 5s infinite;
   }
+
   .travel {
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: bolder;
     color: #5c051f;
   }
+
   .worldcupred {
     height: 30px;
   }
+
   .eclogo {
     height: 50px;
   }
+
   .ecuador {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .ecuador img {
     margin: 5px;
   }
+
   @keyframes mascot {
     0% {
       transform: translateY(-50px);
     }
+
     30% {
       transform: translateY(0) rotate(5deg);
     }
+
     50% {
       transform: rotate(-5deg);
     }
+
     75% {
       transform: rotate(5deg);
     }
+
     100% {
       transform: translateY(-50px);
     }
   }
 
   .form_group {
-  display: flex;
+    display: flex;
     padding: 0 20px;
     padding-bottom: 30px;
     width: 250px;
@@ -548,12 +591,13 @@ padding: 10px;
     transition: transform 0.5s, color 0.3s;
   }
 
-  .form_input:focus + .form_label,
-  .form_input:not(:placeholder-shown) + .form_label {
+  .form_input:focus+.form_label,
+  .form_input:not(:placeholder-shown)+.form_label {
     transform: translateY(-12px) scale(0.9);
     transform-origin: top left;
     color: rgb(102, 3, 3);
   }
+
   .ecuador {
     display: flex;
     padding: 0;
@@ -564,30 +608,35 @@ padding: 10px;
   .ecuador img:nth-child(2) {
     height: auto;
   }
+
   .footer-container {
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
+
   html .body .sponsors {
     max-width: 500px;
     height: auto;
     margin: 0;
   }
+
   body .burger {
     display: none;
   }
-  body #btn{
+
+  body #btn {
     display: flex;
     background-color: #8d1334;
     align-items: center;
     padding: 0, 7px;
   }
-  body #btn img{
-  height: 40px;
-  width: auto;
-  padding-left: 5px;
+
+  body #btn img {
+    height: 40px;
+    width: auto;
+    padding-left: 5px;
   }
 }
 
@@ -611,9 +660,67 @@ padding: 10px;
 .modal li {
   color: white;
 }
-/*
-min-width
-max-width
 
-height...
-*/
+#textomensaje {
+  resize: none;
+
+}
+
+#textarea_form label {
+  text-align: left;
+
+}
+
+#textarea_form {
+  width: 371px;
+}
+
+#textcasilla_form {
+  width: 375px;
+  position: relative;
+  top: -15px;
+}
+
+.form_group .form_casilla {
+  width: 100%;
+}
+
+.form_casilla {
+  text-align: left;
+}
+
+.finalbtn input {
+  background-color: var(--redlightqatar);
+  padding: 8px;
+  color: white;
+  font-family: 'Qatar2022';
+  font-display: swap;
+  font-size: 15px;
+  border: 1px solid var(--redlightqatar);
+  border-radius: 7px;
+  margin: 13px;
+  transition: .3s all ease;
+}
+.gender{
+  background-color: white ;
+  color: var(--redlightqatar);
+  font-family: 'Qatar2022';
+  font-display: swap;
+  font-weight: bold;
+  font-size: 17px;
+}
+.gender_P {
+ font-size: 15px;
+}
+.checkbox_m:checked{
+ accent-color:  #8d1334;
+}
+.finalbtn input:hover{
+  transform: scale(1.1);
+}
+.gender_account{
+  text-align: center;
+}
+.radio_m{
+  accent-color: var(--redlightqatar);
+}
