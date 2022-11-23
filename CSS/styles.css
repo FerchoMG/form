@@ -701,26 +701,32 @@ body .burger {
   margin: 13px;
   transition: .3s all ease;
 }
-.gender{
-  background-color: white ;
+
+.gender {
+  background-color: white;
   color: var(--redlightqatar);
   font-family: 'Qatar2022';
   font-display: swap;
   font-weight: bold;
   font-size: 17px;
 }
+
 .gender_P {
- font-size: 15px;
+  font-size: 15px;
 }
-.checkbox_m:checked{
- accent-color:  #8d1334;
+
+.checkbox_m:checked {
+  accent-color: #8d1334;
 }
-.finalbtn input:hover{
+
+.finalbtn input:hover {
   transform: scale(1.1);
 }
-.gender_account{
+
+.gender_account {
   text-align: center;
 }
-.radio_m{
+
+.radio_m {
   accent-color: var(--redlightqatar);
 }
