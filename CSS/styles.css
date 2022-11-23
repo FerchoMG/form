@@ -646,10 +646,12 @@ body .burger {
   left: 0;
   right: 0;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.514);
+  background: linear-gradient(#8d1334c2, #5c051fc4);
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease;
+  display: flex;
+  
 }
 
 .modal-on {
@@ -673,6 +675,7 @@ body .burger {
 
 #textarea_form {
   width: 371px;
+
 }
 
 #textcasilla_form {
@@ -724,9 +727,53 @@ body .burger {
 }
 
 .gender_account {
-  text-align: center;
+  text-align: justify;
+  
 }
 
 .radio_m {
   accent-color: var(--redlightqatar);
 }
+#textomensaje{
+height: 50%;
+height: 73px;
+}
+#option_gender{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -15px;
+
+}
+.fieldset{
+ padding: 0px;
+ margin:  auto;
+ width: 95%;
+}
+.form{
+  padding: 0px !important;
+}
+.modal li{
+display: block;
+width: 100%;
+text-align: center;
+text-decoration: nones;
+height: 12vh;
+
+}
+.modal ul li:nth-child(1){
+  margin-top: 50px;
+}
+.modal ul{
+  width: 100vh;
+  height: 100vh;
+}
+.modal a{
+  text-decoration: none;
+color: white;
+}
+.modal i{
+  margin-right: 5px;
+}
+
+
